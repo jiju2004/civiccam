@@ -1,0 +1,62 @@
+# CivicCam .gitignore
+
+# Virtual Environment
+civiccam_env/
+venv/
+env/
+.venv/
+
+# Environment variables (contains secrets)
+.env
+!.env.example
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Datasets (too large for git) - keep structure files
+datasets/*/train/
+datasets/*/valid/
+datasets/*/test/
+!datasets/**/data.yaml
+
+# Training runs and outputs
+runs/
+
+# Model weights (downloaded during runtime)
+yolov8*.pt
+!models/civiccam_best.pt
+
+# Streamlit secrets (contains API keys)
+.streamlit/secrets.toml
+!.streamlit/secrets.toml.example
+
+# Incidents (local data)
+incidents/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.temp
